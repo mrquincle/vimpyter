@@ -121,7 +121,7 @@ function! vimpyter#createView()
 
   " Transform json to markdown and save the result in proxy
   call system('notedown --to markdown ' . l:original_file .
-        \ ' > ' . l:proxy_file)
+        \ ' > ' . '''' . l:proxy_file . '''')
 
   " Open proxy file
   silent execute 'edit' l:proxy_file
